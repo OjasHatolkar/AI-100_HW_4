@@ -7,6 +7,7 @@ from google import genai
 # Load Gemini API
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
+print(api_key)
 client = genai.Client(api_key=api_key)
 
 # Dictionaries
@@ -29,7 +30,7 @@ def get_priority(task_name):
     prompt = get_query(task_name)
 
     response = client.models.generate_content(
-    model="gemini-2.0-flash",
+    model="gemini-1.5-flash",
     contents=prompt
     )  
 
