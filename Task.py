@@ -7,7 +7,7 @@ class Task:
         self.progress = 0
     
     def update_progress(self, total_progress):
-        self.progress = self.total_progress
+        self.progress = total_progress
 
     def __str__(self):
         if self.progress >= 100:
